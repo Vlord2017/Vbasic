@@ -96,6 +96,12 @@
     <Compile Include="RibbonForm1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="save.Designer.vb">
+      <DependentUpon>save.vb</DependentUpon>
+    </Compile>
+    <Compile Include="save.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\licenses.licx" />
@@ -104,6 +110,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonForm1.resx">
+      <DependentUpon>RibbonForm1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
