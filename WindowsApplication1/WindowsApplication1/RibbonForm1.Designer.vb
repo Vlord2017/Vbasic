@@ -19,6 +19,7 @@ Partial Class RibbonForm1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RibbonForm1))
         Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
@@ -29,11 +30,14 @@ Partial Class RibbonForm1
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarMdiChildrenListItem1 = New DevExpress.XtraBars.BarMdiChildrenListItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.BarMdiChildrenListItem1 = New DevExpress.XtraBars.BarMdiChildrenListItem()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RibbonControl
@@ -44,7 +48,7 @@ Partial Class RibbonForm1
         Me.RibbonControl.MaxItemId = 2
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(985, 155)
+        Me.RibbonControl.Size = New System.Drawing.Size(979, 156)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         Me.RibbonControl.Toolbar.ItemLinks.Add(Me.BarButtonItem1)
         Me.RibbonControl.Toolbar.ItemLinks.Add(Me.BarButtonItem2)
@@ -92,6 +96,16 @@ Partial Class RibbonForm1
         Me.BarButtonItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         Me.BarButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'BarMdiChildrenListItem1
+        '
+        Me.BarMdiChildrenListItem1.Caption = "ventanas"
+        Me.BarMdiChildrenListItem1.CategoryGuid = New System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537")
+        Me.BarMdiChildrenListItem1.Glyph = CType(resources.GetObject("BarMdiChildrenListItem1.Glyph"), System.Drawing.Image)
+        Me.BarMdiChildrenListItem1.GlyphDisabled = CType(resources.GetObject("BarMdiChildrenListItem1.GlyphDisabled"), System.Drawing.Image)
+        Me.BarMdiChildrenListItem1.Id = 1
+        Me.BarMdiChildrenListItem1.Name = "BarMdiChildrenListItem1"
+        Me.BarMdiChildrenListItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
@@ -109,26 +123,24 @@ Partial Class RibbonForm1
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 524)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 523)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(985, 31)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(979, 32)
         '
-        'BarMdiChildrenListItem1
+        'XtraTabbedMdiManager1
         '
-        Me.BarMdiChildrenListItem1.Caption = "ventanas"
-        Me.BarMdiChildrenListItem1.CategoryGuid = New System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537")
-        Me.BarMdiChildrenListItem1.Glyph = CType(resources.GetObject("BarMdiChildrenListItem1.Glyph"), System.Drawing.Image)
-        Me.BarMdiChildrenListItem1.GlyphDisabled = CType(resources.GetObject("BarMdiChildrenListItem1.GlyphDisabled"), System.Drawing.Image)
-        Me.BarMdiChildrenListItem1.Id = 1
-        Me.BarMdiChildrenListItem1.Name = "BarMdiChildrenListItem1"
-        Me.BarMdiChildrenListItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.XtraTabbedMdiManager1.MdiParent = Me
+        '
+        'DefaultLookAndFeel1
+        '
+        Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Silver"
         '
         'RibbonForm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 555)
+        Me.ClientSize = New System.Drawing.Size(979, 555)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
         Me.IsMdiContainer = True
@@ -138,6 +150,7 @@ Partial Class RibbonForm1
         Me.Text = "RibbonForm1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -151,6 +164,8 @@ Partial Class RibbonForm1
     Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarMdiChildrenListItem1 As DevExpress.XtraBars.BarMdiChildrenListItem
+    Friend WithEvents XtraTabbedMdiManager1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
+    Friend WithEvents DefaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
 
 
 End Class
